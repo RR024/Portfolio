@@ -1,0 +1,311 @@
+/* ========================================
+   THEME TOGGLE BUTTON
+   ======================================== */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  margin-right: 0.75rem;
+}
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.theme-toggle__icon {
+  font-size: 1.125rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.theme-toggle__icon--pro {
+  display: none;
+}
+.theme-toggle__label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Professional Theme Active */
+[data-theme="professional"] .theme-toggle__icon--creative {
+  display: none;
+}
+[data-theme="professional"] .theme-toggle__icon--pro {
+  display: inline;
+}
+[data-theme="professional"] .theme-toggle {
+  background: rgba(30, 58, 138, 0.9);
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* ========================================
+   PROFESSIONAL THEME STYLES
+   ======================================== */
+
+/* Root variables for professional theme */
+[data-theme="professional"] {
+  --pro-primary: #1e3a8a;
+  --pro-secondary: #3b82f6;
+  --pro-accent: #0ea5e9;
+  --pro-bg-dark: #0f172a;
+  --pro-bg-light: #f8fafc;
+  --pro-text-light: #f1f5f9;
+  --pro-text-dark: #1e293b;
+}
+
+/* Hide gaming videos in professional mode */
+[data-theme="professional"] .hero__bg,
+[data-theme="professional"] .hero__next-video,
+[data-theme="professional"] .hero__mini,
+[data-theme="professional"] .discover__item-video {
+  opacity: 0 !important;
+  visibility: hidden;
+}
+
+/* Professional Hero Section */
+[data-theme="professional"] .hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+}
+[data-theme="professional"] .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+[data-theme="professional"] .hero__row {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+}
+[data-theme="professional"] .hero__label {
+  color: #fff;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  -webkit-text-fill-color: #fff;
+}
+[data-theme="professional"] .hero__label--inside {
+  color: rgba(255, 255, 255, 0.1);
+}
+[data-theme="professional"] .hero__subtitle {
+  color: #cbd5e1;
+}
+[data-theme="professional"] .hero__btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+  color: #fff;
+}
+[data-theme="professional"] .hero__btn:hover {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+/* Professional About Section */
+[data-theme="professional"] .about {
+  background: #f8fafc;
+}
+[data-theme="professional"] .about__eyebrow {
+  color: #3b82f6;
+}
+[data-theme="professional"] .about__title {
+  color: #0f172a;
+}
+[data-theme="professional"] .about__subtext {
+  color: #475569;
+}
+[data-theme="professional"] .about__viewport {
+  background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
+}
+[data-theme="professional"] .about__image {
+  opacity: 0.3;
+  mix-blend-mode: overlay;
+}
+
+/* Professional Discover/Projects Section */
+[data-theme="professional"] .discover {
+  background: #0f172a;
+}
+[data-theme="professional"] .discover__title {
+  color: #fff;
+}
+[data-theme="professional"] .discover__text {
+  color: #94a3b8;
+}
+[data-theme="professional"] .discover__item {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+[data-theme="professional"] .discover__tilt {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+}
+[data-theme="professional"] .discover__item:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+}
+[data-theme="professional"] .discover__item-title {
+  color: #fff;
+}
+[data-theme="professional"] .discover__item-text {
+  color: #94a3b8;
+}
+[data-theme="professional"] .discover__item--color {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%) !important;
+}
+[data-theme="professional"] .discover__item--color .discover__tilt {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%) !important;
+}
+[data-theme="professional"] .discover__item--color .discover__item-content {
+  background: transparent;
+}
+
+/* Professional Story/Skills Section */
+[data-theme="professional"] .story {
+  background: #f8fafc;
+}
+[data-theme="professional"] .story__pretitle {
+  color: #3b82f6;
+}
+[data-theme="professional"] .story__title {
+  color: #0f172a;
+  mix-blend-mode: normal;
+}
+
+/* Professional CTA Section */
+[data-theme="professional"] .cta {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+[data-theme="professional"] .cta__content {
+  background: transparent;
+}
+[data-theme="professional"] .cta__label {
+  color: #60a5fa;
+}
+[data-theme="professional"] .cta__title {
+  color: #fff;
+}
+[data-theme="professional"] .cta__button {
+  background: #fff;
+  color: #1e3a8a;
+}
+[data-theme="professional"] .cta__button:hover {
+  background: #f1f5f9;
+}
+[data-theme="professional"] .decor__item {
+  opacity: 0.1;
+  filter: grayscale(100%) brightness(2);
+}
+
+/* Professional Footer */
+[data-theme="professional"] .footer {
+  background: #0f172a;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+}
+[data-theme="professional"] .footer__copy,
+[data-theme="professional"] .footer__privacy {
+  color: #94a3b8;
+}
+[data-theme="professional"] .footer__social-link {
+  color: #94a3b8;
+}
+[data-theme="professional"] .footer__social-link:hover {
+  color: #3b82f6;
+}
+
+/* Professional Header */
+[data-theme="professional"] .header__container {
+  background: rgba(15, 23, 42, 0.95) !important;
+  backdrop-filter: blur(20px);
+}
+[data-theme="professional"] .menu__logo {
+  color: #fff;
+}
+[data-theme="professional"] .menu__link {
+  color: #e2e8f0;
+}
+[data-theme="professional"] .menu__link:hover {
+  color: #3b82f6;
+}
+[data-theme="professional"] .menu__btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+  color: #fff;
+}
+
+/* Professional Preloader */
+[data-theme="professional"] .preloader {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+}
+[data-theme="professional"] .preloader__brand {
+  color: #fff;
+}
+[data-theme="professional"] .preloader__fill {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+/* Smooth transitions for theme switch */
+.hero,
+.hero__row,
+.about,
+.discover,
+.discover__item,
+.discover__tilt,
+.story,
+.cta,
+.cta__content,
+.footer,
+.header__container,
+.preloader,
+.btn {
+  transition: background 0.5s ease, color 0.3s ease, border-color 0.3s ease, background-color 0.5s ease;
+}
+
+/* Add subtle animated gradient to professional hero */
+[data-theme="professional"] .hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(59, 130, 246, 0.05) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: proGradient 8s ease infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes proGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Theme Toggle Responsive */
+@media (max-width: 47.99875em) {
+  .theme-toggle {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.75rem;
+  }
+  .theme-toggle__icon {
+    font-size: 1rem;
+  }
+  .theme-toggle__label {
+    display: none;
+  }
+}
+
+@media (max-width: 24.0625em) {
+  .theme-toggle {
+    padding: 0.35rem 0.6rem;
+  }
+}
