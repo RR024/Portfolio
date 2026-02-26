@@ -111,10 +111,10 @@
 								<div class="hero__copy">
 									<h2 class="hero__label">AI & Full-Stack</h2>
 									<p class="hero__subtitle">Building Intelligent Systems & Digital Experiences</p>
-									<a class="hero__btn btn btn--light-gr --icon-cursor-l" href="#projects">
+									<a class="hero__btn btn btn--light-gr --icon-cursor-l" href="#about">
 										<span class="btn__label">
-											<span class="btn__main">view projects</span>
-											<span class="btn__alt">explore now!</span>
+											<span class="btn__main">learn more</span>
+											<span class="btn__alt">about me!</span>
 										</span>
 									</a>
 								</div>
@@ -125,30 +125,55 @@
 					<h2 class="hero__label hero__label--inside">Developer</h2>
 				</div>
 			</section>
-			<section id="about" class="about">
-				<h2 class="visually-hidden">About Me</h2>
-				<div class="about__container">
-					<p class="about__eyebrow">👋 Hi, I'm Rohit Ram</p>
-					<h3 class="about__title anim-title">Pre-Final-Year AI & Data Science Student | Full-Stack Developer
-					</h3>
-					<div class="about__subtext">
-						<p>Passionate about building intelligent systems with 3+ years of experience</p>
-						<p>From mobile apps to industrial IoT — I turn complex problems into elegant solutions</p>
+			<section class="about-section" id="about">
+				<div class="about-section__container">
+					<div class="about-section__header">
+						<span class="about-section__label">About Me</span>
+						<h2 class="about-section__title anim-title">I Build Intelligent Systems,<br>Not Just Applications</h2>
 					</div>
-
-					<!-- Animated mask expansion effect -->
-					<div class="about__viewport" id="clip">
-						<div class="about__image mask-clip-path">
-							<picture>
-								<source media="(max-width: 600px)" srcset="./assets/img/about-600.webp"
-									type="image/webp">
-								<source media="(max-width: 1200px)" srcset="./assets/img/about-1200.webp"
-									type="image/webp">
-								<img alt="Rohit Ram - AI & Full-Stack Developer Workspace" loading="lazy"
-									class="about__img" src="./assets/img/about.webp">
-							</picture>
+					
+					<div class="about-section__content">
+						<div class="about-section__main">
+							<div class="about-section__intro">
+								<p>I am an <strong>AI & Data Science student</strong> who loves turning complex problems into practical solutions — from full-stack web apps to data-driven AI models.</p>
+								<p>I enjoy working across the stack, whether it's designing clean user interfaces, building backend logic, or training machine learning models.</p>
+							</div>
+							
+							<div class="about-section__grid">
+								<div class="about-card">
+									<div class="about-card__icon">🤖</div>
+									<h3 class="about-card__title">AI-Powered Solutions</h3>
+									<p class="about-card__text">Building intelligent applications that leverage machine learning and data-driven insights</p>
+								</div>
+								
+								<div class="about-card">
+									<div class="about-card__icon">💻</div>
+									<h3 class="about-card__title">Full-Stack Development</h3>
+									<p class="about-card__text">Creating complete product solutions from frontend design to backend architecture</p>
+								</div>
+								
+								<div class="about-card">
+									<div class="about-card__icon">📊</div>
+									<h3 class="about-card__title">Data Visualization</h3>
+									<p class="about-card__text">Transforming complex data into meaningful insights and interactive analytics</p>
+								</div>
+								
+								<div class="about-card">
+									<div class="about-card__icon">🚀</div>
+									<h3 class="about-card__title">Real-World Deployment</h3>
+									<p class="about-card__text">Deploying ML models and scalable solutions that make real impact</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="about-section__philosophy">
+							<div class="philosophy-quote">
+								<div class="philosophy-quote__mark">"</div>
+								<p class="philosophy-quote__text">I believe technology should be useful, scalable, and meaningful. I aim to build solutions that make that happen.</p>
+							</div>
 						</div>
 					</div>
+				</div>
 			</section>
 			<section class="discover" id="projects" aria-labelledby="discover-title">
 				<div class="discover__container">
@@ -240,18 +265,49 @@
 							<br>
 							& Creative Tools
 						</h2>
-						<div class="story__image">
-							<div class="story__image-area js-tilt-area" data-tilt-area="" data-tilt-max="12">
-								<div class="story__image-inner" data-tilt-target="">
-									<picture>
-										<source media="(max-width: 600px)" srcset="./assets/img/entrance-600.webp"
-											type="image/webp">
-										<source media="(max-width: 1200px)" srcset="./assets/img/entrance-1200.webp"
-											type="image/webp">
-										<img class="story__image-img js-tilt-frame"
-											alt="Rohit Ram Tech Stack - Java, Python, Kotlin, JavaScript, AI/ML, IoT"
-											loading="lazy" draggable="false" src="./assets/img/entrance.webp">
-									</picture>
+
+						<div class="skills-grid">
+							<div class="skill-category">
+								<h3 class="skill-category__title">Frontend</h3>
+								<div class="skill-tags">
+									<span class="skill-tag">HTML</span>
+									<span class="skill-tag">CSS</span>
+									<span class="skill-tag">JavaScript</span>
+								</div>
+							</div>
+
+							<div class="skill-category">
+								<h3 class="skill-category__title">Backend</h3>
+								<div class="skill-tags">
+									<span class="skill-tag">Java (Servlets)</span>
+									<span class="skill-tag">Python</span>
+								</div>
+							</div>
+
+							<div class="skill-category">
+								<h3 class="skill-category__title">Databases</h3>
+								<div class="skill-tags">
+									<span class="skill-tag">MySQL</span>
+									<span class="skill-tag">JDBC</span>
+								</div>
+							</div>
+
+							<div class="skill-category">
+								<h3 class="skill-category__title">AI / ML</h3>
+								<div class="skill-tags">
+									<span class="skill-tag">Data Analysis</span>
+									<span class="skill-tag">Machine Learning Models</span>
+									<span class="skill-tag">Data Visualization</span>
+								</div>
+							</div>
+
+							<div class="skill-category">
+								<h3 class="skill-category__title">Other Skills</h3>
+								<div class="skill-tags">
+									<span class="skill-tag">Git</span>
+									<span class="skill-tag">API Integration</span>
+									<span class="skill-tag">Unity (Game Dev)</span>
+									<span class="skill-tag">Blender</span>
 								</div>
 							</div>
 						</div>
